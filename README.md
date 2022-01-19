@@ -1,5 +1,6 @@
 
-#  dapp-core
+
+#  dapp-core-components
 
 > A library that holds the the core logic of a dapp on the Elrond Network
 
@@ -9,15 +10,15 @@
 
 The library can be installed via npm or yarn.
 ```bash
-npm install @elrondnetwork/dapp-core
+npm install @elrondnetwork/dapp-core-components
 ```
 or
 ```bash
-yarn add @elrondnetwork/dapp-core
+yarn add @elrondnetwork/dapp-core-components
 ```
 # Usage
 
-dapp-core aims to abstract and simplify the process of interacting with users' wallets and with the Elrond Network, allowing developers to easily get started with a new application or integrate dapp-core into an existing application.
+dapp-core-components aims to abstract and simplify the process of interacting with users' wallets and with the Elrond Network, allowing developers to easily get started with a new application or integrate dapp-core-components into an existing application.
 
 This library covers two main areas: **User Identity** and **Transactions**. The API for interacting with library's logic is exposed via hooks and methods that can be called for logging in the user, getting the status of the user or sending transactions.
 
@@ -25,7 +26,7 @@ However, to simplify usage even further, the library also comes with a default U
 
 The default UI is exposed via the `DappUI` object.
 
-`import { DappUI } from "@elrondnetwork/dapp-core";`
+`import { DappUI } from "@elrondnetwork/dapp-core-components";`
 
 More on this below.
 
@@ -52,7 +53,7 @@ This library was built for applications that use React, it might not be suitable
 You need to wrap your application with the **DappProvider** component, which is exported by the library, as we need to create a global Context to be able to manipulate the data.
 - import the Provider:
 
-`import { DappProvider } from "@elrondnetwork/dapp-core";`
+`import { DappProvider } from "@elrondnetwork/dapp-core-components";`
 
 - Wrap your application with this Provider.
 
@@ -78,7 +79,7 @@ As you might have noticed, the DappProvider accepts a `networkConfig` object wit
   </details>
 
 ## User Identity
-Dapp-core makes logging in and persisting user's session easy and hassle-free. The library exposes two ways in which a user can be logged in:
+dapp-core-components makes logging in and persisting user's session easy and hassle-free. The library exposes two ways in which a user can be logged in:
 
 
   <details>
@@ -116,9 +117,9 @@ Also, for a quicker setup, the `DappUI` object exports an `DappUI.UnlockPage` co
 
 Another handly component is DappUI.AuthenticatedRoutesWrapper, which can be used to protect certain routes and redirect the user to login page if the user is not authenticated.
 
-Import from dapp-core:
+Import from dapp-core-components:
 ```
-import { AuthenticatedRoutesWrapper} from "@elrondnetwork/dapp-core";
+import { AuthenticatedRoutesWrapper} from "@elrondnetwork/dapp-core-components";
 ```
 
 Use with routes:
@@ -152,10 +153,10 @@ Login hooks
 ### Login hooks
 If needed, the Login UI can be bypassed using a custom UI, and opt in for the login hooks, which expose a trigger function and the login data, ready to be rendered.
 
-These hooks are exposed by the `loginServices` object, which can be imported from dapp-core:
+These hooks are exposed by the `loginServices` object, which can be imported from dapp-core-components:
 
 ```
-import {loginServices} from @elrondnetwork/dapp-core
+import {loginServices} from @elrondnetwork/dapp-core-components
 ```
 
 There are 4 available hooks:
@@ -229,7 +230,7 @@ There are 2 ways of reading the user current state: hooks (to be used inside com
 
 ## Transactions
 
-The dapp-core library exposes a straight-forward way of sending transactions and tracking their status, with a couple of handy UI components;
+The dapp-core-components library exposes a straight-forward way of sending transactions and tracking their status, with a couple of handy UI components;
 
 
 
@@ -240,7 +241,7 @@ Sending Transactions
 ### Sending Transactions
 The API for sending transactions is a function called **sendTransactions**:
 
-`import { sendTransactions } from "@elrondnetwork/dapp-core";`
+`import { sendTransactions } from "@elrondnetwork/dapp-core-components";`
 
 It can be used to send a transaction with minimum information:
 
@@ -270,7 +271,7 @@ Tracking a transaction
 The library exposes a hook called useTrackTransactionStatus under the object `transactionServices`.
 
 ```
-import {transactionServices} from @elrondnetwork/dapp-core;
+import {transactionServices} from @elrondnetwork/dapp-core-components;
 
 const transactionStatus = transactionServices.useTrackTransactionStatus({
   transactionId: sessionId,
@@ -303,7 +304,7 @@ Transaction Toasts UI
   </summary>
 
 ### Transaction Toasts UI
-dapp-core also exposes a toast component for tracking transactions that uses the above mentioned hooks and displays toasts with transactions statuses.
+dapp-core-components also exposes a toast component for tracking transactions that uses the above mentioned hooks and displays toasts with transactions statuses.
 
 The toasts list is exposed via **DappUI.TransactionsToastList** component and can be used just by rendering it inside the application.
 
@@ -320,7 +321,7 @@ The toasts list is exposed via **DappUI.TransactionsToastList** component and ca
 
 ## Roadmap
 
-See the [open issues](https://github.com/ElrondNetwork/dapp-core/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/ElrondNetwork/dapp-core-components/issues) for a list of proposed features (and known issues).
 
 ## Contributing
 
