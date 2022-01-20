@@ -44,7 +44,7 @@ const SignWithExtensionModal = ({
         className={className}
         iconBgClass={error ? 'bg-danger' : 'bg-warning'}
         iconSize='3x'
-        title='Confirm on Elrond Wallet Extension'
+        title='Confirm on Maiar DeFi Wallet'
         description={description}
         action={
           <a
