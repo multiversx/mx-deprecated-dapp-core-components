@@ -1,5 +1,9 @@
 import React from 'react';
-import { DappProvider, DappUI } from '@elrondnetwork/dapp-core-components';
+import {
+  DappProvider,
+  DappCoreUIWrapper,
+  DappUI
+} from '@elrondnetwork/dapp-core-components';
 import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
 import Layout from 'components/Layout';
 import { network, walletConnectBridge, walletConnectDeepLink } from 'config';
@@ -20,24 +24,26 @@ const App = () => {
       <DappProvider
         networkConfig={{ network, walletConnectBridge, walletConnectDeepLink }}
       >
-        <Layout>
-          <TransactionsToastList />
-          <SignTransactionsModals className='custom-class-for-modals' />
-          <Routes>
-            <Route
-              path={routeNames.unlock}
-              element={<UnlockPage loginRoute={routeNames.dashboard} />}
-            />
-            {routes.map((route: any, index: number) => (
+        <DappCoreUIWrapper>
+          <Layout>
+            <TransactionsToastList />
+            <SignTransactionsModals className='custom-class-for-modals' />
+            <Routes>
               <Route
-                path={route.path}
-                key={'route-key-' + index}
-                element={<route.component />}
+                path={routeNames.unlock}
+                element={<UnlockPage loginRoute={routeNames.dashboard} />}
               />
-            ))}
-            <Route path='*' element={<PageNotFound />} />
-          </Routes>
-        </Layout>
+              {routes.map((route: any, index: number) => (
+                <Route
+                  path={route.path}
+                  key={'route-key-' + index}
+                  element={<route.component />}
+                />
+              ))}
+              <Route path='*' element={<PageNotFound />} />
+            </Routes>
+          </Layout>
+        </DappCoreUIWrapper>
       </DappProvider>
     </Router>
   );

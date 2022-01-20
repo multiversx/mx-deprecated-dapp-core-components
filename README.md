@@ -117,6 +117,18 @@ when something happens inside the app:
 </App>
 ```
 
+- DappCoreUIWrapper is a wrapper that needs to be wrapped around the whole tree to namespace the styles inside dapp-core-components Components.
+
+```
+  import {DappCoreUIWrapper} from "@elrondnetwork/dapp-core-components";
+
+<App>
+  <DappCoreUIWrapper>
+  <Content/>
+  </DappCoreUIWrapper>
+</App>
+```
+
 
 
 </details>
