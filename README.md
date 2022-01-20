@@ -2,9 +2,9 @@
 
 #  dapp-core-components
 
-> A library that holds the the core logic of a dapp on the Elrond Network
+> A library that holds the core logic of a dapp on the Elrond Network with an example to get started easily
 
-[![NPM](https://img.shields.io/npm/v/dapp-core.svg)](https://www.npmjs.com/package/@elrondnetwork/dapp-core) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/dapp-core.svg)](https://www.npmjs.com/package/@elrondnetwork/dapp-core-components) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 # Installation
 
@@ -77,6 +77,50 @@ As you might have noticed, the DappProvider accepts a `networkConfig` object wit
 }
 ```
   </details>
+
+
+<details>
+  <summary>
+    UI Wrappers
+ </summary>
+
+### UI Wrappers
+
+The library exposes a couple of Components that are connected to the redux store and are used to display various elements
+when something happens inside the app:
+
+- TransactionsToastList will display new transactions in nice toasts at the bottom of the screen. This component is fully customizable.
+```
+  import {DappUI} from "@elrondnetwork/dapp-core-components";
+
+  <App>
+    <DappUI.TransactionsToastList
+    toastId?: string,
+    title: string,
+    shouldRenderDefaultCss?: boolean,
+    className?: string
+    />
+    <Content/>
+  </App>
+
+```
+
+
+
+- SignTransactionsModals will show a modal when a new transaction is submitted, prompting the user to verify and sign it.
+```
+  import {DappUI} from "@elrondnetwork/dapp-core-components";
+
+<App>
+  <DappUI.SignTransactionsModals />
+  <Content/>
+</App>
+```
+
+
+
+</details>
+
 
 ## User Identity
 dapp-core-components makes logging in and persisting user's session easy and hassle-free. The library exposes two ways in which a user can be logged in:
