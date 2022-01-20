@@ -6,6 +6,9 @@
 
 [![NPM](https://img.shields.io/npm/v/dapp-core.svg)](https://www.npmjs.com/package/@elrondnetwork/dapp-core-components) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
+
+If you need only the dapp-core basic logic, without the additional UI, consider using the stripped down version at [@elrondnetwork/dapp-core](https://github.com/ElrondNetwork/dapp-core)
+
 # Installation
 
 The library can be installed via npm or yarn.
