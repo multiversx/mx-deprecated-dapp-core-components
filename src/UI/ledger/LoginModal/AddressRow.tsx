@@ -28,11 +28,12 @@ const AddressRow = ({
   const ref = React.useRef(null);
   const [balance, setBalance] = React.useState(noBalance);
   const isAddressSelected = selectedAddress === address;
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const checked = e.target.checked;
-    if (checked) {
+  const handleChange = () => {
+    const isCurrentlySelected = selectedAddress === address;
+    const isSelected = !isCurrentlySelected;
+    if (isSelected) {
       onSelectAddress({ address, index });
-    } else if (isAddressSelected && !checked) {
+    } else if (isAddressSelected && !isSelected) {
       onSelectAddress(null);
     }
   };
@@ -51,14 +52,13 @@ const AddressRow = ({
   }, []);
 
   return (
-    <tr ref={ref}>
+    <tr onClick={handleChange} role='button' ref={ref}>
       <td className='text-left'>
         <div className='d-flex align-items-start text-left form-check'>
           <input
             type='radio'
             id={`check_${index}`}
             data-testid={`check_${index}`}
-            onChange={handleChange}
             checked={selectedAddress === address}
             className='form-check-input mr-1 cursor-pointer'
           />
