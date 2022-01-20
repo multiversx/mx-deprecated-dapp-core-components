@@ -92,7 +92,7 @@ As you might have noticed, the DappProvider accepts a `networkConfig` object wit
 The library exposes a couple of Components that are connected to the redux store and are used to display various elements
 when something happens inside the app:
 
-- TransactionsToastList will display new transactions in nice toasts at the bottom of the screen. This component is fully customizable.
+- `TransactionsToastList` will display new transactions in nice toasts at the bottom of the screen. This component is fully customizable.
 ```
   import {DappUI} from "@elrondnetwork/dapp-core-components";
 
@@ -110,7 +110,7 @@ when something happens inside the app:
 
 
 
-- SignTransactionsModals will show a modal when a new transaction is submitted, prompting the user to verify and sign it.
+- `SignTransactionsModals` will show a modal when a new transaction is submitted, prompting the user to verify and sign it.
 ```
   import {DappUI} from "@elrondnetwork/dapp-core-components";
 
@@ -120,7 +120,7 @@ when something happens inside the app:
 </App>
 ```
 
-- DappCoreUIWrapper is a wrapper that needs to be wrapped around the whole tree to namespace the styles inside dapp-core-components Components.
+- `DappCoreUIWrapper` is a wrapper that needs to be wrapped around the whole tree to namespace the styles inside dapp-core-components Components.
 
 ```
   import {DappCoreUIWrapper} from "@elrondnetwork/dapp-core-components";
