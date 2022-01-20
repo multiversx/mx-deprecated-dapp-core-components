@@ -2,10 +2,9 @@ import React from 'react';
 import {
   getEgldLabel,
   denominate,
-  isTokenTransfer,
-  ActiveLedgerTransactionType
+  isTokenTransfer
 } from '@elrondnetwork/dapp-core';
-import { Address } from '@elrondnetwork/erdjs/out';
+import { Address } from '@elrondnetwork/erdjs';
 import { faHourglass, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { denomination, decimals } from 'constants/index';
 import useGetTokenDetails from 'hooks/useGetTokenDetails';
@@ -22,7 +21,7 @@ export interface SignStepType {
   error: string | null;
   callbackRoute: string;
   currentStep: number;
-  currentTransaction: ActiveLedgerTransactionType;
+  currentTransaction: any;
   isLastTransaction: boolean;
   className: string;
 }
