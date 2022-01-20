@@ -21,7 +21,7 @@ const Transaction = () => {
         <>
           <p>
             <a
-              href={`${network.explorerAddress}transactions/${txHash}`}
+              href={`${network.explorerAddress}/transactions/${txHash}`}
               {...{
                 target: '_blank'
               }}

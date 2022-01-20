@@ -73,7 +73,7 @@ const TransactionList = ({
                   </td>
                   <td className='transaction-hash'>
                     <a
-                      href={`${network.explorerAddress}transactions/${tx.txHash}`}
+                      href={`${network.explorerAddress}/transactions/${tx.txHash}`}
                       {...{
                         target: '_blank'
                       }}
@@ -101,7 +101,7 @@ const TransactionList = ({
       </div>
       <div className='d-flex justify-content-center'>
         <a
-          href={`${network.explorerAddress}address/${account.address}`}
+          href={`${network.explorerAddress}/address/${account.address}`}
           {...{
             target: '_blank'
           }}
