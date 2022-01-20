@@ -50,7 +50,7 @@ export function WalletConnectLoginModal({
   );
 
   const generateQRCode = async () => {
-    if (walletConnectUri == null) {
+    if (!walletConnectUri) {
       return;
     }
 

@@ -1,6 +1,6 @@
 {
   "name": "@elrondnetwork/dapp-core-components",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A library to hold the main UI logic for a dapp on the Elrond Network",
   "author": "ElrondNetwork",
   "license": "GPL-3.0-or-later",
