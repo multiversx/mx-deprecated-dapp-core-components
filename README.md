@@ -119,6 +119,17 @@ when something happens inside the app:
   <Content/>
 </App>
 ```
+`NotificationModal` Will show a modal to the user with various warnings and errors.
+
+```
+  import {DappUI} from "@elrondnetwork/dapp-core-components";
+
+<App>
+  <DappUI.NotificationModal />
+  <Content/>
+</App>
+
+```
 
 - `DappCoreUIWrapper` is a wrapper that needs to be wrapped around the whole tree to namespace the styles inside dapp-core-components Components.
 
