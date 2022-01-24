@@ -1,4 +1,4 @@
-import { NetworkType } from '@elrondnetwork/dapp-core-components';
+import { NetworkType } from '@elrondnetwork/dapp-core';
 
 export const decimals = 4;
 export const denomination = 18;

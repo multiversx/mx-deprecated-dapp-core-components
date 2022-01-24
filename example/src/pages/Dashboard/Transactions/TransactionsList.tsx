@@ -1,5 +1,6 @@
 import React from 'react';
-import { useGetAccountInfo, DappUI } from '@elrondnetwork/dapp-core-components';
+import { DappUI } from '@elrondnetwork/dapp-core-components';
+import { useGetAccountInfo } from '@elrondnetwork/dapp-core';
 import { Ui } from '@elrondnetwork/dapp-utils';
 import moment from 'moment';
 import { network } from 'config';

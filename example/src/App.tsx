@@ -1,9 +1,6 @@
 import React from 'react';
-import {
-  DappProvider,
-  DappCoreUIWrapper,
-  DappUI
-} from '@elrondnetwork/dapp-core-components';
+import { DappCoreUIWrapper, DappUI } from '@elrondnetwork/dapp-core-components';
+import { DappProvider } from '@elrondnetwork/dapp-core';
 import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
 import Layout from 'components/Layout';
 import { network, walletConnectBridge, walletConnectDeepLink } from 'config';

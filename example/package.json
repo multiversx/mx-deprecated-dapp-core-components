@@ -10,6 +10,7 @@
     "eject": "node ../node_modules/react-scripts/bin/react-scripts.js eject"
   },
   "dependencies": {
+    "@elrondnetwork/dapp-core": "file:../node_modules/@elrondnetwork/dapp-core",
     "@elrondnetwork/dapp-core-components": "file:..",
     "@testing-library/jest-dom": "file:../node_modules/@testing-library/jest-dom",
     "@testing-library/react": "file:../node_modules/@testing-library/react",
@@ -21,6 +22,7 @@
     "axios": "0.24.0",
     "bootstrap": "^4.6.0",
     "node-sass": "file:../node_modules/node-sass",
+    "react": "17.0.2",
     "react-dom": "file:../node_modules/react-dom",
     "react-router-dom": "^6.2.1",
     "react-scripts": "file:../node_modules/react-scripts",
