@@ -17,8 +17,8 @@ export function LedgerLoginContainer({
   token
 }: {
   callbackRoute: string;
-  className: string;
-  shouldRenderDefaultCss: boolean;
+  className?: string;
+  shouldRenderDefaultCss?: boolean;
   token?: string;
 }) {
   const generatedClasses = getGeneratedClasses(
