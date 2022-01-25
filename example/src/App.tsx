@@ -7,7 +7,7 @@ import { network, walletConnectBridge, walletConnectDeepLink } from 'config';
 import PageNotFound from 'pages/PageNotFound';
 import { routeNames } from 'routes';
 import routes from 'routes';
-import '@elrondnetwork/dapp-core-components/build/index.css';
+// import '@elrondnetwork/dapp-core-components/build/index.css';
 
 const {
   TransactionsToastList,
